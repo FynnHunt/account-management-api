@@ -58,16 +58,17 @@ export const accountRoutes = ({
   );
 
   router.put(
-    "/account",
+    "/account/:id",
     express.json(),
     async (req: Request, res: Response) => {
+      const { id } = req.params;
       const { phone, email, address, name }: Partial<Account> = req.body;
 
       // why am I JSON parsing / JSON stringifying below???
       // it's a quick way to remove nulls / undefined's from an object which means the update
       // request will not overwrite account data that wasn't passed in in the request
       const paramsToUpdate = JSON.parse(
-        JSON.stringify({ phone, email, address, name })
+        JSON.stringify({ id, phone, email, address, name })
       );
 
       let account;

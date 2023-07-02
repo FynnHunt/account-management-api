@@ -50,9 +50,9 @@ export const accountModel: AccountModel = {
       return Promise.reject("No id passed in in update request");
     }
     try {
-      // Here I would update the account in the db using Knex
-      // I have stubbed out the data persistence layer so I am instead returning a test account to simulate this
-      return Promise.resolve(testAccount);
+      // Here I would attempt to update the account in the db using Knex
+      // I have stubbed out the data persistence layer so I am instead returning a test account merged with the new data to simulate this
+      return Promise.resolve({ ...testAccount, ...account });
     } catch {
       return Promise.reject("Failed creating new account");
     }
