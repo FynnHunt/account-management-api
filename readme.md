@@ -9,3 +9,9 @@ This API was written for a coding test / task so hasn't had a huge amount of tim
 - Set up tests for each route and model function using jest
 - Add some sanitization for returned account data
 - Sanitize data received in API requests before posting to the DB
+
+### How to run
+
+First run **npm run build** to generate a build.
+Now run the build using **npm run start**
+You can test the routes at localhost:3000/api/account...
