@@ -9,6 +9,7 @@ export const startServer = (
 ) => {
   const app = express();
   app.use(appRouter);
+  app.use(express.json());
   app.listen(port, () => {
     console.log(`${serviceName} listening on port ${port}`);
   });
