@@ -12,6 +12,6 @@ This API was written for a coding test / task so hasn't had a huge amount of tim
 
 ### How to run
 
-First run **npm run build** to generate a build.
-Now run the build using **npm run start**
-You can test the routes at localhost:3000/api/account...
+- First run **npm run build** to generate a build.
+- Now run the build using **npm run start**
+- You can test the routes at localhost:3000/api/account...
